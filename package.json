@@ -1,0 +1,14 @@
+{
+  "name": "todoangular",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    
+  },
+  "engines": {
+    "node": ">=3.10.0"
+  },
+  "scripts": {
+    "run": "lite-server"
+  }
+}

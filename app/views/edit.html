@@ -1,0 +1,32 @@
+﻿<div class="panel-default " ng-init="onInit()">
+    <div class="panel-body">
+        <form class="form-group">
+            <div class="edit">
+                <div class="header"></div>
+                <div class="pad-10">
+                    <input class="form-control" ng-model="todo.title" placeholder="Add Title" />
+                </div>
+                <div class="pad-10">
+                    <textarea class="form-control" ng-model="todo.description" placeholder="Add Descritpion"></textarea>
+                </div>
+                <div class="col-sm-4 pad-10">
+                    <select class="form-control" ng-model="todo.priority" placeholder="Select Priority">
+                        <option value="Low"> Low </option>
+                        <option value="Medium"> Medium </option>
+                        <option value="High"> High </option>
+                    </select>
+                </div>
+                <div class="col-sm-4 pad-10">
+                    <select class="form-control" ng-model="todo.status" placeholder="Mark status">
+                        <option value="Pending"> Pending </option>
+                        <option value="Done"> Done </option>
+                    </select>
+                </div>
+                <div class="footer pull-right">
+                    <button class="btn btn-success" ng-click="saveForm()">Save</button>
+                    <button class="btn btn-default" (click)="resetForm()">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

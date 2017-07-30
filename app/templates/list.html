@@ -1,0 +1,26 @@
+﻿<div class="col-sm-12" ng-init="onInit()">
+    <div class="col-sm-11" ng-if="todos.length">
+        <table width="100%" class="table table-striped">
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="todo in todos track by todo.id" ng-class="{'done':todo.status == 'Done'}">
+                <td> {{todo.title}}</td>
+                <td>{{todo.description}}</td>
+                <td>{{todo.priority}}</td>
+                <td>{{todo.status}}</td>
+                <td>
+                    <a class="error" href="todo/edit/{{todo.id}}">Edit</a>
+                    <a class="error" ng-click="removeTodo(todo.id)">Remove</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-sm-12" ng-if="todos.length == 0">
+        No Task Found.
+    </div>
+</div>
